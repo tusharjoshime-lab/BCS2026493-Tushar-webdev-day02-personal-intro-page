@@ -1,0 +1,184 @@
+/* 1. Page defaults */
+:root {
+  --ink: #172033;
+  --muted: #5d687c;
+  --accent: #7257e8;
+  --accent-light: #eeeaff;
+  --paper: #f7f8fc;
+  --white: #ffffff;
+  --line: #e6e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+/* 2. Introduction banner */
+.hero {
+  padding: 76px 24px;
+  text-align: center;
+  color: var(--white);
+  background: linear-gradient(135deg, #171d3b, #382a72 65%, #5b47bc);
+}
+
+.eyebrow,
+.section-label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.14em;
+}
+
+.eyebrow {
+  color: #d8d1ff;
+}
+
+.hero h1 {
+  margin: 16px 0 8px;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #cfc5ff;
+}
+
+.tagline {
+  max-width: 580px;
+  margin: 18px auto 0;
+  color: #e4e5f7;
+  font-size: 1.1rem;
+}
+
+/* 3. Main content cards */
+.container {
+  width: min(900px, calc(100% - 32px));
+  margin: -24px auto 52px;
+  position: relative;
+}
+
+.card {
+  margin: 20px 0;
+  padding: clamp(22px, 4vw, 36px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 12px 34px #242c4b0a;
+}
+
+.section-label {
+  margin: 0 0 8px;
+  color: var(--accent);
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h3 {
+  margin: 0 0 5px;
+  font-size: 1.05rem;
+}
+
+.education-item {
+  margin-top: 20px;
+  padding-left: 16px;
+  border-left: 3px solid var(--accent-light);
+}
+
+.education-item p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.interest {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: #fcfcff;
+}
+
+.interest-icon {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+}
+
+.interest p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-list li {
+  padding: 6px 13px;
+  background: var(--accent-light);
+  color: #4935b1;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.goal-card {
+  background: linear-gradient(135deg, #ffffff, #f1efff);
+}
+
+/* 4. Footer */
+.footer {
+  padding: 28px 20px 34px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.footer p {
+  margin: 0 0 5px;
+}
+
+.footer-small {
+  font-size: 0.85rem;
+}
+
+/* 5. Mobile layout */
+@media (max-width: 560px) {
+  .hero {
+    padding: 58px 20px;
+  }
+
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: calc(100% - 22px);
+  }
+
+  .card {
+    border-radius: 16px;
+  }
+}
